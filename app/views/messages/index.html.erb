@@ -6,7 +6,8 @@
         <li><%= link_to message.body, message_path(message) %></li>
       <% end %>
     </ul>
-    <%= link_to "New Message", new_message_path %>
+    <%= link_to "New Message", new_message_path %> |
+    <%= link_to "Contacts", contacts_path %>
   </div>
 
 </div>
