@@ -3,7 +3,7 @@
 <div class="row">
 <ul>
   <% @messages.each do |message| %>
-    <li><%= link_to message.body, message_path(message) %></li>
+    <li><%= link_to (message.body, message_path(message) %></li>
   <% end %>
 </ul>
 
