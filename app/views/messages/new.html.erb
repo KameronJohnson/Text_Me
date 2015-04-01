@@ -1,20 +1,22 @@
-<div class = "container">
-
+<div class="col-md-4 col-md-offset-4">
   <h2>New Message</h2>
-
-  <div class="col-md-12">
 
   <%= render "layouts/errors", :object => @message %>
 
   <%= form_for @message do |form| %>
-    <%= form.label :from %>
-    <%= form.text_field :from %>
-    <%= form.label :to %>
-    <%= form.text_field :to %>
-    <%= form.label :body %>
-    <%= form.text_field :body %>
-    <%= form.submit class: 'btn btn-sm btn-warning' %>
+    <div class = "form-group">
+      <%= form.label :from %>
+      <%= form.text_field :from, class: 'form-control' %>
+    </div>
+    <div class = "form-group">
+      <%= form.label :to %>
+      <%= form.text_field :to, class: 'form-control' %>
+    </div>
+    <div class = "form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, class: 'form-control' %>
+    </div>
+    <%= form.submit class: 'btn btn-md btn-danger' %>
   <% end %>
 
-  </div>
 </div>

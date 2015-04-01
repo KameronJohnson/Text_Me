@@ -7,6 +7,15 @@
  * Based on Bootstrap
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+.right-align {
+  text-align: right
+}
+
+.cool-border{
+  border: 1px #e4e4e4 solid;
+  padding: 20px;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
