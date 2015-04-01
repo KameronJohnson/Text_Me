@@ -24,7 +24,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'dotenv'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -33,6 +33,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do

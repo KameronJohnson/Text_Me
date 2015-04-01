@@ -1,0 +1,17 @@
+<h2>New Message</h2>
+
+<div class="row">
+
+<%= render "layouts/errors", :object => @message %>
+
+<%= form_for @message do |form| %>
+  <%= form.label :from %>
+  <%= form.text_field :from %>
+  <%= form.label :to %>
+  <%= form.text_field :to %>
+  <%= form.label :body %>
+  <%= form.text_field :body %>
+  <%= form.submit class: 'btn btn-sm btn-warning' %>
+<% end %>
+
+</div>
