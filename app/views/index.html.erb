@@ -1,0 +1,7 @@
+<h2>Messages</h2>
+
+<ul>
+  <% @messages.each do |message| %>
+    <li><%= link_to message.body %></li>
+  <% end %>
+</ul>
