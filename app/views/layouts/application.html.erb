@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -17,22 +17,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Text Me</a>
+      <a class="navbar-brand" href="messages">Text Me</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
+
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li> <%= link_to "Sign up", new_user_registration_path %> </li>
+        <li> <%= link_to "Sign in", new_user_session_path %> </li>
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
-
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
-
-<%= yield %>
+  <div class = "col-md-12">
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+  </div>
+  <%= yield %>
 
 </body>
 </html>
