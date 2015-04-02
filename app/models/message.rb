@@ -1,5 +1,9 @@
 class Message < ActiveRecord::Base
   before_create :send_message
+  validates :from, presence: true
+  validates :to, presence: true
+  validates :body, presence: true
+  belongs_to :user
 
 private
 
