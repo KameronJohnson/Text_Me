@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150401233528) do
+ActiveRecord::Schema.define(version: 20150402051316) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(version: 20150401233528) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "from"
-    t.string "to"
-    t.text   "body"
+    t.string  "from"
+    t.string  "to"
+    t.text    "body"
+    t.integer "contact_id"
   end
 
   create_table "users", force: :cascade do |t|

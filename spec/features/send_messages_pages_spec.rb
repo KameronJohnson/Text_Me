@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe 'the send text message process' do
-  it 'will send a new text message', js: true, vcr: true do
-    visit root_path
+describe 'the send text message process', vcr: true do
+  it 'will send a new text message'  do
+    visit '/'
     click_on 'New Message'
     fill_in 'From', with: "5032134556"
-    fill_in 'To', with: "5037841300"
+    fill_in 'To', with: "5035555555"
     fill_in 'Body', with: "I like your booty, baby"
     click_on 'Create Message'
       expect(page).to have_content('Message sent')
