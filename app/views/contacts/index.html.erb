@@ -1,13 +1,9 @@
 <div class="col-md-7 col-md-offset-3">
   <div class="cool-border">
   <h2>Contacts</h2>
-    <% if @contacts.any? %>
     <ul>
-      <% @contacts.order(name: :asc).each do |contact| %>
-        <li><%= contact.name %> | <%= contact.phone %></li>
-      <% end %>
+      <%= render @contacts.order(name: :asc) %>
     </ul>
-    <% end %>
     <%= link_to "Add Contact", new_contact_path %> |
     <%= link_to "Go Back", "/" %>
   </div>

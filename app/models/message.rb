@@ -3,7 +3,7 @@ class Message < ActiveRecord::Base
   validates :from, presence: true
   validates :to, presence: true
   validates :body, presence: true
-  belongs_to :user
+  belongs_to :contact
 
 private
 

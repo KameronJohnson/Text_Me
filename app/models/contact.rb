@@ -1,3 +1,5 @@
 class Contact < ActiveRecord::Base
-  belongs_to :user
+  has_many :messages
+  validates :name, presence: true
+  validates :phone, presence: true
 end
