@@ -1,7 +1,7 @@
 Text Me
 ======
 
-A text messaging app where you can create a text message and send to contact.
+A text messaging app where you can create a text message and send to contacts.
 
 Built with Rails / Postgres / Twilio
 
