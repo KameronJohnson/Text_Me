@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "add a contact process", vcr: true do
+describe "add a contact process" do
   it 'adds a new contact' do
     visit messages_path
     click_on "Contacts"

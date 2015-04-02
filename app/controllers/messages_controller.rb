@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-
+  before_filter :authenticate_user!, except: [:index, :show]
   def index
     @messages = Message.all
   end
@@ -11,16 +11,12 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.save
+    @message.save
       flash[:notice] = "Message sent."
-      redirect_to messages_path
-    else
-      render :new
+        respond_to do |format|
+          format.html { redirect_to messages_path }
+          format.js
     end
-  end
-
-  def edit
-    @message = Message.find(params[:id])
   end
 
   def show
@@ -30,7 +26,11 @@ class MessagesController < ApplicationController
   def destroy
     @message = Message.find(params[:id])
     @message.destroy
-    redirect_to messages_path
+        respond_to do |format|
+            format.html { redirect_to messages_path }
+            format.js
+    end
+    flash[:notice] = "Message deleted."
   end
 
 

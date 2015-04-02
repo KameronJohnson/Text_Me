@@ -6,7 +6,7 @@ http_interactions:
       account sid>/Messages.json
     body:
       encoding: US-ASCII
-      string: From=5032134556&To=5037841300&Body=Hey%20baby!
+      string: From=5032134556&To=5037841301&Body=Hey%20baby!
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -20,31 +20,28 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 201
-      message: CREATED
+      code: 400
+      message: BAD REQUEST
     headers:
       Content-Type:
       - application/json
       Date:
-      - Thu, 02 Apr 2015 00:36:07 GMT
+      - Thu, 02 Apr 2015 22:14:56 GMT
       X-Powered-By:
       - AT-5000
       X-Shenanigans:
       - none
       Content-Length:
-      - '742'
+      - '338'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"sid": "SM6c5fcb33826f4bf0955009f4a0d3d57c", "date_created": "Thu,
-        02 Apr 2015 00:36:07 +0000", "date_updated": "Thu, 02 Apr 2015 00:36:07 +0000",
-        "date_sent": null, "account_sid": "<twilio account sid>", "to": "+15037841300",
-        "from": "+15032134556", "body": "Hey baby!", "status": "queued", "num_segments":
-        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
-        "price": null, "price_unit": "USD", "error_code": null, "error_message": null,
-        "uri": "/2010-04-01/Accounts/<twilio account sid>/Messages/SM6c5fcb33826f4bf0955009f4a0d3d57c.json",
-        "subresource_uris": {"media": "/2010-04-01/Accounts/<twilio account sid>/Messages/SM6c5fcb33826f4bf0955009f4a0d3d57c/Media.json"}}'
+      string: '{"code": 21608, "message": "The number +15037841301 is unverified.
+        Trial accounts cannot send messages to unverified numbers; verify +15037841301
+        at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number
+        to send messages to unverified numbers.", "more_info": "https://www.twilio.com/docs/errors/21608",
+        "status": 400}'
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 00:36:08 GMT
+  recorded_at: Thu, 02 Apr 2015 22:14:56 GMT
 recorded_with: VCR 2.9.3

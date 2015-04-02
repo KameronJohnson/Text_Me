@@ -29,6 +29,7 @@ end
 
 group :test do
   gem 'capybara'
+  # gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'poltergeist'
