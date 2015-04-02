@@ -3,6 +3,7 @@
   <h2>Contacts</h2>
     <ul>
       <%= render @contacts.order(name: :asc) %>
+      
     </ul>
     <%= link_to "Add Contact", new_contact_path %> |
     <%= link_to "Go Back", "/" %>

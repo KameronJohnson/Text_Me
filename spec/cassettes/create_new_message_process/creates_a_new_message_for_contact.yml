@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<twilio account sid>:<twilio auth token>@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=5032134556&To=5037841300&Body=Becky%2C%20about%20her%20butt...
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '67'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 02 Apr 2015 19:06:07 GMT
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '757'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMb3fe5ba2e8a840a59b2e603e1434a88c", "date_created": "Thu,
+        02 Apr 2015 19:06:06 +0000", "date_updated": "Thu, 02 Apr 2015 19:06:06 +0000",
+        "date_sent": null, "account_sid": "<twilio account sid>", "to": "+15037841300",
+        "from": "+15032134556", "body": "Becky, about her butt...", "status": "queued",
+        "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version":
+        "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message":
+        null, "uri": "/2010-04-01/Accounts/<twilio account sid>/Messages/SMb3fe5ba2e8a840a59b2e603e1434a88c.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/<twilio account sid>/Messages/SMb3fe5ba2e8a840a59b2e603e1434a88c/Media.json"}}'
+    http_version: 
+  recorded_at: Thu, 02 Apr 2015 19:06:06 GMT
+recorded_with: VCR 2.9.3

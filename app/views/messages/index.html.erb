@@ -3,21 +3,13 @@
   <h2>Messages</h2>
 
     <ul>
-      <% if user_signed_in? %>
       <% @messages.each do |message| %>
-      <% if current_user.id === message.contact_id %>
         <li><%= link_to message.body, message_path(message) %></li>
-      <% end %>
-      <% end %>
+    <% end %>
     </ul>
     <%= link_to "New Message", new_message_path %> |
     <%= link_to "Contacts", contacts_path %>
-    <% else %>
-    <br>
-    <p> Sorry, you must <%= link_to "Sign up", new_user_registration_path %> or
-    <%= link_to "Sign in", new_user_session_path %> to Text Me™</p>
-    <% end %>
+
 
   </div>
-
 </div>
